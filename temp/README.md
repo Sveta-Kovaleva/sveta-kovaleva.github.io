@@ -1,1 +1,0 @@
-# sveta-kovaleva.github.io
