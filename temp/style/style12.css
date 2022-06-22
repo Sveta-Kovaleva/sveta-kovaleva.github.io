@@ -1,0 +1,96 @@
+.section__blur {
+    display: flex;
+    align-items: center;
+  }
+  
+  p {
+    font-size: 25px;
+  }
+  
+  .box {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(148, 235, 152, 0.297);
+    /* margin: 0 auto; */
+    position: absolute;
+    /* translate: 50% 50%; */
+    backdrop-filter: blur(2px);
+  }
+  
+  /* Transform img */
+  
+  .section__transform {
+    background: rgb(24, 193, 255);}
+    
+    .square {
+    transform: scale(1.5) translate(50%,0);
+}
+  
+  
+  img {
+    transform: translate3d(25px, 10px, 0);
+    margin: 50px;
+  }
+  
+  .animation {
+    width: 700px;
+    height: 300px;
+    background-color: #8439f4;
+  
+    animation: 2s bgAnim, 2s fadeOut 2s;
+  }
+
+  
+  
+  @keyframes bgAnim {
+    to {
+      background-color: rgb(6, 176, 111);
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0.2;
+      width: 300px;
+      background-color: rgb(233, 219, 25);
+    }
+  }
+  
+  .radius {
+    background-color: rgb(218, 251, 50);
+  }
+  
+  .radius div {
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 20px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 1);
+    /* animation: 2s ease-in 1s 2 reverse both paused fadeIn; */
+  
+    animation-name: moveX, bgChange;
+    animation-duration: 4s, 2s;
+    animation-fill-mode: both, forwards;
+    animation-delay: 2s;
+  }
+  @keyframes moveX {
+    from {
+      transform: translateX(0);
+      /* box-shadow: 2px 2px 5px 5px rgb(216, 33, 33); */
+    }
+    to {
+      transform: translateX(100px);
+    }
+  }
+  
+  @keyframes bgChange {
+    from {
+      background: red;
+      box-shadow: -5px 5px 15px -5px rgb(3, 19, 252);
+    }
+    to {
+      background: green;
+      box-shadow: 5px -5px 15px -25px rgb(199, 69, 18);
+    }
+  }
